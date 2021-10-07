@@ -32,3 +32,7 @@ To learn about making your **First Open Source** contribution watch [this](https
 
 Made by Deepak Uniyal
 M.Tech. CSE IIT Roorkee
+
+<a href="https://github.com/deepakuniyaliit/open-source-projects/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=deepakuniyaliit/open-source-projects" />
+</a>
