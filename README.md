@@ -11,6 +11,24 @@ Make sure you are not contributing someone else's code and if you are using any 
 Note:
 ---
 
-- To learn about how to contribute to this repository refer to [CONTRIBUTION.md]().
+- To learn about how to contribute to this repository refer to [CONTRIBUTION.md](https://github.com/k40t1k-sys/open-source-projects/blob/main/CONTRIBTION.md).
 
-- 
+
+## Resources:
+
+1. Join [Telegram](https://t.me/easy_concepts) Group for any discussion
+
+2. [YouTube](https://www.youtube.com/c/TheEasyConcepts/) Channel For Resources
+
+3. [Discord](https://discord.gg/vTF2Pe7g) For more efficient Discussion
+
+4. Be in touch with via [Linkedin](https://www.linkedin.com/in/deepak-uniyal-592b7545)
+
+For more query you can visit the **Official Hactoberfest 2021** _FAQs_ [here](https://hacktoberfest.digitalocean.com/faq)
+
+To learn about making your **First Open Source** contribution watch [this](https://www.youtube.com/watch?v=62V88DzJh-A) video.
+
+## :heart: Contributor
+
+Made by Deepak Uniyal
+M.Tech. CSE IIT Roorkee
