@@ -1,4 +1,34 @@
-# open-source-projects
-This repositry has been created as a medium for developers to participate in the Hactoberfest 2021 event. You can sign up anytime between October 1 and October 31. Just be sure to sign up on the official Hacktoberfest website for your pull requests to count.
+ <h1 align="center">open-source-projects</h1>
 
-**Note - Dear contributors, our [old repositpry](https://github.com/deepakuniyaliit/hacktoberfest2021) has been excluded from the Hacktoberfest, due to unknown reasons. If you make a pull request to that repository now, it will not be counted in the HacktoberFest. We will update this [new repository](https://github.com/deepakuniyaliit/open-source-projects) with new rules and guidelines by the end of 6th October 2021. Once we update it, you can make the pull requests to this either by selecting the given list of issues or creating your own issue. Thanks for your cooperation and patience.**
+This repositry has been created as a medium for developers to participate in the **Hactoberfest 2021** event. You can sign up anytime between October 1 and October 31. Just be sure to sign up on the official **[Hacktoberfest](https://hacktoberfest.digitalocean.com/)** website for your pull requests to count.
+
+
+## You are invited to make changes in this repository, we will accept your pull request if you fulfill all the basic criterias of program writing as listed below:
+---
+
+Make sure you are not contributing someone else's code and if you are using any refernces please provide it's description in README file of your project.
+
+Note:
+---
+
+- To learn about how to contribute to this repository refer to [CONTRIBUTION.md](https://github.com/k40t1k-sys/open-source-projects/blob/main/CONTRIBTION.md).
+
+
+## Resources:
+
+1. Join [Telegram](https://t.me/easy_concepts) Group for any discussion
+
+2. [YouTube](https://www.youtube.com/c/TheEasyConcepts/) Channel For Resources
+
+3. [Discord](https://discord.gg/vTF2Pe7g) For more efficient Discussion
+
+4. Be in touch with via [Linkedin](https://www.linkedin.com/in/deepak-uniyal-592b7545)
+
+For more query you can visit the **Official Hactoberfest 2021** _FAQs_ [here](https://hacktoberfest.digitalocean.com/faq)
+
+To learn about making your **First Open Source** contribution watch [this](https://www.youtube.com/watch?v=62V88DzJh-A) video.
+
+## :heart: Contributor
+
+Made by Deepak Uniyal
+M.Tech. CSE IIT Roorkee
