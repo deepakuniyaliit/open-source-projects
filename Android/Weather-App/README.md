@@ -7,6 +7,9 @@
 <!-- video link -->
 - Video Link => [click here](https://youtu.be/alD0hfXQEm4) 
 
+<!-- app link -->
+- App link => [click here](app-debug.apk)
+
 ## Screenshots 
 <!-- image link -->
 <p>
