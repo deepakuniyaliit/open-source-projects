@@ -1,4 +1,12 @@
- <h1 align="center">open-source-projects</h1>
+<h1 align="center">Hacktoberfest2021</h1>
+
+<p align="center">
+    <a href="https://hacktoberfest.digitalocean.com/">
+        <img src="https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg" width="50%">
+    </a>
+</p>
+
+Welcome Contributors,
 
 This repositry has been created as a medium for developers to participate in the **Hactoberfest 2021** event. You can sign up anytime between October 1 and October 31. Just be sure to sign up on the official **[Hacktoberfest](https://hacktoberfest.digitalocean.com/)** website for your pull requests to count.
 
@@ -8,10 +16,13 @@ This repositry has been created as a medium for developers to participate in the
 
 Make sure you are not contributing someone else's code and if you are using any refernces please provide it's description in README file of your project.
 
+
 Note:
 ---
 
 - To learn about how to contribute to this repository refer to [CONTRIBUTION.md](https://github.com/k40t1k-sys/open-source-projects/blob/main/CONTRIBTION.md).
+
+- No basic Algorithm or DSA question are considered a valid contribution, so please refrain from making PRs of such programs.
 
 
 ## Resources:

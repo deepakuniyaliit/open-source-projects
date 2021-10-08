@@ -28,4 +28,4 @@ Details:
 Note:
 ---
 
-- Remeber to add file name correctly and not add your name anywhere except in README.
+- Remeber to add file name correctly and not mention your name anywhere except in README.
