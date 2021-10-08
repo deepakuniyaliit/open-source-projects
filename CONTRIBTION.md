@@ -6,7 +6,7 @@ Details:
 
 - fork this repository.
 
-- clone the forked repository in your locaal machine.
+- clone the forked repository in your local machine.
 
 - add the folder by the name of your project in the main repository folder.
 
@@ -28,4 +28,4 @@ Details:
 Note:
 ---
 
-- Remeber to add file name correctly and not mention your name anywhere except in README.
+- Remeber to add file name correctly and do not mention your name anywhere except in README.

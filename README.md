@@ -22,7 +22,7 @@ Note:
 
 - To learn about how to contribute to this repository refer to [CONTRIBUTION.md](https://github.com/k40t1k-sys/open-source-projects/blob/main/CONTRIBTION.md).
 
-- No basic Algorithm or DSA question are considered a valid contribution, so please refrain from making PRs of such programs.
+- No Algorithm or DSA question are considered as a valid contribution, so please refrain from making PRs of such programs.
 
 
 ## Resources:
