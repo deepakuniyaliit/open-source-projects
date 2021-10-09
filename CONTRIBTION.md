@@ -24,8 +24,3 @@ Details:
 
 - the instructions to run your project should be clear in the README file.
 
-
-Note:
----
-
-- Remeber to add file name correctly and do not mention your name anywhere except in README.
