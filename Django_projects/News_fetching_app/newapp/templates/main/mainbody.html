@@ -1,0 +1,27 @@
+{% extends "main/index.html" %}
+
+{% block content %}
+    <br>
+  <div class="conatiner font-monospace">
+      {% for hl,des,img in List %}
+      <div class="d-flex flex-row bd-highlight mb-3">
+        <img style="width: 50%; height: auto;" class="img-thumbnail" src="{{ img }}" alt="image">
+        <div class="position-relative">
+            <div class="badge bg-dark mb-2"><h1>Headline -</h1></div>
+            <div class="position top-50 start-0 "><h2>{{ hl }}{{ value|linebreaks }}</h2> </div>
+            <br>
+            <div class="badge bg-primary mb-2"><h1>Description -</h1></div>
+            <br>
+            <div class="position bottom-50 start-0"><h2>{{ des }}{{ value|linebreaks }}</h2></div>
+            
+        </div>
+      </div>
+    </span>
+    <div class="p-3 mb-2 bg-dark text-white"></div>
+      {% endfor %}
+  </div>
+{% endblock %}
+
+
+
+
