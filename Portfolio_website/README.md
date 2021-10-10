@@ -1,43 +1,11 @@
-# SumitRawat.github.io
+# Welcome To My Portfolio
 
-You can visit my Profilie [here](https://sumit24-prog.github.io/SumitRawat.github.io/)
-or you can see screenshot below.
+## Home View
 
+![App Screenshot](https://blogger.googleusercontent.com/img/a/AVvXsEhc01q1ESViFLCo2QNVMqmrOC8dqCbHd5wxcfa2GTFqSVNFjCOLTnHBuWJNAFk4xmX1P6R9ObhUgmzJl2eCeufWIpNSBvEzgZzVbiHaxYLnheT0sTqzhWlcj6h09D9y1VnH23nehxWU_C_hhiyDr6gzbzFc6uR6AVrrd6oaKzOkyWR2rRcv4vh1mNpL0g=s16000)
 
-It is My portfolio here is the first page
-index.html
+## About View
+![App Screenshot](https://blogger.googleusercontent.com/img/a/AVvXsEio80sZlFoTzk8S22G9cD5ODkrrGB5o34yIIzeUYt2ltvey3v4yDaa6YACUoDdfZRocK8TsmqvbbQ1q5lh3iJXIxkp8G9ADeEeNnlxxNN_lbc78vMLT_DxqEf81pQVJ7LsKBjwSeY4PGdQpEMVdGoa2SILgqwiGEm3s-ffqXYtyZK14IpirExQH-uv_jA=s16000)
 
-
-
-![ALt text](./images/oc2.JPG?raw=true "Front Page")
-
-
-
-Here is my Second Page
-About.html
-
-
-
-![ALt text](./images/oc3.JPG?raw=true "Front Page")
-
-
-
-Here is my Third Page
-project.html
-
-
-
-![ALt text](./images/oc4.JPG?raw=true "Front Page")
-
-
-
-Here is my Fourth Page
-Contact.html
-
-
-
-![ALt text](./images/oc5.JPG?raw=true "Front Page")
-
-
-
-**This website is created for showing my skills and knowledge of HTML,CSS,JavaScript work.**
+## Project View
+![App Screenshot](https://blogger.googleusercontent.com/img/a/AVvXsEjx7BU7RdWCk6FP09LdiQrtRtZjnvnsRFUsvPvYFYBC9bSAW1CfLbIousr1g-yElHGpTa8_ACNlGAALVPfKYL4Bk0Won_jm1Vyt7J6LsMwS8enRtQ0tOA5XRUTPQULFdtOdxqiY9GePWjagQtCQD1b4JStHxV8P1ytHYMhOGVjEj6qMlOVWpVl7n4xohg=s16000)
