@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="home">
+        <div class="hero">
+            <div class="overlay"></div>
+            <h1>Dhairya Marwah</h1>
+        </div>
+    </header>
+    <div class="sticky-wrapper">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Faq</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section id="item1">
+        <h1>Home Section</h1>
+    </section>
+    <section id="item2">
+        <h1>second Section</h1>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(window).scroll(function(){
+            var heroHeight=$('header').height();
+            var yposition=$(document).scrollTop();
+
+            if(yposition<=heroHeight){
+                var effectFactor=yposition/heroHeight;
+                var rotation =effectFactor *(Math.PI / 2 -Math.asin((heroHeight - yposition) / heroHeight))
+                $('.hero').css({
+                    '-webkit-transform':'rotateX('+rotation+'rad)',
+                    'transfor':'rotateX('+rotation+'rad)'                                                                                               
+                })
+                .find('.overlay').css('opacity',effectFactor)
+            }
+            if (yposition <=heroHeight){
+                $('nav').removeClass('fixed');
+            }
+            else{
+                $('nav').addClass('fixed');
+            }
+        })
+    </script>
+</body>
+</html>

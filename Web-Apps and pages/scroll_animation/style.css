@@ -1,0 +1,89 @@
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #fff;
+}
+h1{
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 80px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+h1::before,h1::after{
+     width: 220px;
+     height: 1px;
+     border: 4px double white;
+     content: "";
+     display: block;
+     margin: 20px auto;
+}
+
+header{
+    height: calc(100% - 65px);
+    -webkit-appearance: 1500px;
+    perspective: 1500px;
+    perspective-origin: center bottom;
+}
+
+.hero{
+    position: relative;
+    background:#333 url('peach 1.svg') no-repeat center center;
+    background-size: cover;
+    height: 100%;width: 100%;
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+}
+.hero .overlay{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;opacity: 0;
+    background: linear-gradient(to bottom,rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+
+nav{
+    background-color: rgb(53,41,105);
+    height: 65px;
+}
+nav.fixed{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+}
+.sticky-wrapper{
+    height: 65px;
+}
+nav ul{
+    list-style: none;
+    padding: 0;margin: 0;
+    text-align: center;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+   height: 65px;
+   line-height: 65px;
+   padding: 10px 15px;
+   color: #a1a1a1;
+   font-size: 14px;
+   letter-spacing: 2px;
+   font-weight: 400;
+   text-decoration: none;
+}
+
+section{
+    height: 100%;width: 100%;display: table;
+}
+section#item1{
+    background: #000a1d;
+}
+section#item2{
+    background: url('nightimg.jpg');
+    background-size: cover;
+}
