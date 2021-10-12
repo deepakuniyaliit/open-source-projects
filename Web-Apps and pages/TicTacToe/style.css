@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  background: linear-gradient(#0000002d, #0000002d), url("https://images.squarespace-cdn.com/content/v1/5a2613f6be42d61192e3e478/1582999868688-PEVK3HU4FN1D9V5UDM4K/Screen+Shot+2020-02-29+at+1.07.46+PM.png?format=1000w");
+  overflow: hidden;
+}
+
+h3 {
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.5em;
+  font-family: monospace;
+  align-self: flex-start;
+}
+
+.msg{
+  width: 95%;
+  border-radius: 5px;
+  border: 1px solid #006eff;
+  height:  50px;
+  background-color: #006effa6;
+  margin: 30px 0;
+  padding: auto auto;
+  display: grid;
+  place-content: center;
+  visibility: hidden;
+}
+
+.msg p{
+  font-size: 1.5em;
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+section {
+  font-family: sans-serif;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2px;
+  animation: animate 1s ease-in-out;
+  margin: 3em;
+}
+
+section .box {
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-content: center;
+  background-color: #31a2ff;
+  transform-origin: center center;
+  transition: 0.1s ease-in;
+  font-size: 5vw;
+  cursor: pointer;
+  padding: none;
+  border-radius: 6px;
+  border: 1px solid #0052bd;
+}
+
+.box:hover {
+  background-color: #0052bd;
+}
+
+button {
+  min-width: 200px;
+  padding: 10px 0;
+  cursor: pointer;
+  border: none;
+  background-color: #31a2ff;
+  color: #f0f8ff;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-size: 18px;
+  border: 1px solid #1078ff;
+  border-radius: 80px;
+}
+
+button:hover{
+  background-color: #0052bd;
+}
+
+.click-disable {
+  pointer-events: none !important;
+}
+
+@media (max-width: 650px) {
+  section .box {
+    font-size: 32px;
+    width: 80px;
+    height: 80px;  
+  }
+}
