@@ -24,10 +24,10 @@ W3School [Open](https://www.w3schools.com/w3css/default.asp)\
 Google [Open](https://www.google.com)
 
 ## Screenshots
-![Screenshot1](images/ss1.png)
-![Screenshot2](images/ss2.png)
-![Screenshot3](images/ss3.png)
-![Screenshot4](images/ss4.png)
-![Screenshot4](images/ssfull.png)
+![Screenshot1](image/ss1.png)
+![Screenshot2](image/ss2.png)
+![Screenshot3](image/ss3.png)
+![Screenshot4](image/ss4.png)
+![Screenshot4](image/ssfull.png)
 
 
