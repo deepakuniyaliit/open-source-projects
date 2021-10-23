@@ -1,23 +1,19 @@
-#include<Servo.h>33
+#include<Servo.h>
 #include<ESP8266WiFi.h>
 #include<BlynkSimpleEsp8266.h>
-//for firebase
-#include <SoftwareSerial.h>
-#include <FirebaseArduino.h>
-#include <ArduinoJson.h>
-#include <ESP8266HTTPClient.h>
+#include<FirebaseArduino.h>
 
 char blynk_auth[] = "AawWDIkxreCFbwppLjqLMiEW-0xvaY5l";             // Blynk_Auth_Token
 
-const char *ssid =  "JioFi2_CCFB01";                            // replace with your wifi ssid and wpa2 key
-const char *pass =  "ysi67zmi9k";
+const char *ssid =  "Get_ur_own_WiFi";                            // replace with your wifi ssid and wpa2 key
+const char *pass =  "mai_ni_batara";
 
 #define FIREBASE_HOST "smart-dustbin-296ba-default-rtdb.firebaseio.com"
 #define FIREBASE_AUTH "Xow2gaZJTWBDg2CzToo838Yn0gDnoQvulsM5zVIn"
 
 Servo s;
 
-int z=0,t=0,k=-1,a=0;
+int z=0,t=0,k=-1;
 
 // With V0, the vertical bar is connected
 WidgetLCD lcd(V1);
@@ -40,39 +36,48 @@ void setup()
  
       WiFi.begin(ssid, pass);
  
-      while (WiFi.status() != WL_CONNECTED) 
-      {
+      while (WiFi.status() != WL_CONNECTED){
             delay(500);
             Serial.print(".");
       }
 
+      Serial.println("");
+      Serial.println("WiFi connected");
+
+      Serial.println("");
+      Serial.println("Connecting to Firebase.. ");
+      
       //firebase connection
       Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
       if(Firebase.failed())
           Serial.print(Firebase.error());
       else{
           Serial.print("Firebase Connected");
-          Firebase.setString("Level-of-Bin/Value","0");
+          Firebase.setInt("Level-of-Bin/Value",0);
       }
+
+      String s2=Firebase.getString("Active");
+      if(Firebase.success()){
+          Serial.println("\nStatus of Device:");
+          Serial.print(s2);
+      }
+      else
+          Serial.println("Device not connected to database");
+
+      Blynk.begin(blynk_auth,ssid,pass);
+      Blynk.notify("NODEMCU Online");
+      Blynk.email("kbandooni1@gmail.com", "NODEMCU Online");                                                      
 
       // Dustbin ON
       lcd.clear();
       lcd.print(4,0,"DUSTBIN");
       lcd.print(3,1,"CONNECTED");
       
-      Serial.println("");
-      Serial.println("WiFi connected");
-      Serial.println("");
-      
-      Blynk.begin(blynk_auth,ssid,pass);
-      Blynk.notify("NODEMCU Online");
-      Blynk.email("kbandooni1@gmail.com", "NODEMCU Online");                                                      
-      
       //Dustbin Initially empty
       t=0;
 
       //Dustbin Vertical Fill Empty initially
-      Blynk.virtualWrite(V0,0);
+      Blynk.virtualWrite(V0,t);
       
       //blynk lcd
       delay(4000);
@@ -82,12 +87,6 @@ void setup()
 void loop() 
 {
       Blynk.run();                                                              // Blynk magic 
-
-      String s2=Firebase.getString("Full");
-      if(Firebase.success())
-        Serial.println(s2);
-      else
-        Serial.println("In else block2");
       
       terminal.println("\n");
       terminal.print("Dustbin Status: ");
@@ -96,9 +95,7 @@ void loop()
 
       Blynk.virtualWrite(V0,t);
       
-      z=digitalRead(D0);
-      z=!z;
-      if(z==1){
+      if(!digitalRead(D0)){
            s.write(10);        //servo motor opens the lid of dustbin
            while(!digitalRead(D0)){
                delay(2000);
@@ -115,12 +112,11 @@ void loop()
            Blynk.email("kbandooni1@gmail.com","Dustbin Full, Empty it!! :)");
            k=3;
            t=80;
-      //firebase value added
-      Firebase.setInt("/Level-of-Bin/Value",t);
-      if(Firebase.success())
-        Serial.println("Sent in FB");
-      else
-        Serial.println("In else block");
+           Firebase.setInt("/Level-of-Bin/Value",t);
+           if(Firebase.failed())
+               Serial.print(Firebase.error());
+           else
+               Serial.println("Value Sent");
       }
  
       if(!digitalRead(D4) && k!=2 && digitalRead(D1)==1){                //dustbin at 50%
@@ -129,12 +125,11 @@ void loop()
            lcd.print(3,1,"HALF-FULL");
            k=2;
            t=50;
-      //firebase value added
-      Firebase.setInt("/Level-of-Bin/Value",t);
-      if(Firebase.success())
-        Serial.println("Sent in FB");
-      else
-        Serial.println("In else block");
+           Firebase.setInt("/Level-of-Bin/Value",t);
+           if(Firebase.failed())
+                Serial.print(Firebase.error());
+           else
+                Serial.println("Value Sent");
       }
 
       if(!digitalRead(D3) && k!=1 && digitalRead(D4)==1){                //dustbin at 25%
@@ -143,23 +138,21 @@ void loop()
            lcd.print(5,1,"AT 25%");
            k=1;
            t=25;
-      //firebase value added
-      Firebase.setInt("/Level-of-Bin/Value",t);
-      if(Firebase.success())
-        Serial.println("Sent in FB");
-      else
-        Serial.println("In else block");
+           Firebase.setInt("/Level-of-Bin/Value",t);
+           if(Firebase.failed())
+               Serial.print(Firebase.error());
+           else
+               Serial.println("Value Sent");
       }
  
       if(k!=0 && digitalRead(D1)==1 && digitalRead(D3)==1 && digitalRead(D4)==1){
            k=0;
            t=0;
-      //firebase value added
-      Firebase.setInt("/Level-of-Bin/Value",t);
-      if(Firebase.success())
-        Serial.println("Sent in FB");
-      else
-        Serial.println("In else block");
+           Firebase.setInt("/Level-of-Bin/Value",t);
+           if(Firebase.failed())
+                Serial.print(Firebase.error());
+           else
+                Serial.println("Value Sent");
            lcd.clear();
            lcd.print(1,0,"DUSTBIN LEVEL:");
            lcd.print(4,1,"EMPTY :D");
