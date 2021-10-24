@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Dashboard
+    </title>
+    <style>
+        .sout {
+            padding: 10px 20px;
+            background-color: rgb(52, 59, 156);
+            border: 0px;
+            color: rgb(112, 216, 9);
+            transition: 0.25s linear;
+            font-weight: bold;
+        }
+        
+        .sout:hover {
+            background-color: rgb(112, 216, 9);
+            border: 1px solid #044883;
+            color: rgb(52, 59, 156);
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 400px;
+            width: auto;
+            color: white;
+            margin-top: 100px;
+            padding: 30px 50px 50px 50px;
+            background: rgb(63, 94, 251);
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(193, 22, 240, 1) 100%);
+            border-radius: 10px;
+            margin-bottom: 100px;
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body background="bg.jpg" style="background-color: rgba(37, 5, 56, 0.829);">
+    <center>
+        <div class="container">
+            <div style="margin-top: 10px; border: solid; width: 215px; padding: none; background-color:rgb(52, 59, 156); color: rgb(112, 216, 9)">
+                <h4 style="display: inline-block;">DEVICE : </h4>
+                <h4 id="status" style="display: inline-block;">OFFLINE</h4>
+            </div>
+            <br>
+            <br>
+            <h1 style="display: inline-block; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-top: 0px; margin-bottom: 0px;">SMART GARBAGE MONITORING SYSTEM</h1>
+            <h2 style="font-family: 'Courier New', Courier, monospace;">DUSTBIN 1:&ensp;</h2>
+            <img id="image" src="off.jpg" style="width:100px">
+            <br>
+            <h2 style="display: inline-block; font-family:'Courier New', Courier, monospace;">DUSTBIN LEVEL :&ensp;</h2>
+            <h2 style="display: inline-block; font-family:'Courier New', Courier, monospace;" id="tempout">N/A</h2>
+            <h2 style="display: inline-block; font-family:'Courier New', Courier, monospace;">%</h2>
+            <br>
+            <button onclick="signout() " class="sout">Sign out</button>
+        </div>
+    </center>
+</body>
+
+</html>
