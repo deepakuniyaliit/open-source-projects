@@ -1,0 +1,12 @@
+<begin_table>
+Person
+id
+name
+age
+<end_table>
+<begin_table>
+Job
+id
+personid
+income
+<end_table>
