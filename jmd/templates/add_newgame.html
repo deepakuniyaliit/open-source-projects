@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} Add New Game {% endblock title %}
+
+{% block body %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+    <strong>{{var1}} {{message}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+<div class="mb-3">
+
+    <form method='post' action='/addgame' class="d-flex mx-5 py-5">
+        {% csrf_token %}
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name='word' id='word'>
+
+</div>
+<div class='text-center'>
+<button class="btn btn-primary" type="submit">submit</button>
+</div>
+</form>
+
+
+{% endblock body %}

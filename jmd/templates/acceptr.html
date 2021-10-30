@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %} Accept Request {% endblock title %}
+{% block body %}
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+        <strong>{{name}}{{message}}{{gameid}} </strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+<h1 class="elegantshd text-center"> Accept Request </h1>
+<form method="post" action="/acceptr">
+    {% csrf_token %}
+    <div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput" name="myname" required placeholder="your name">
+  <label for="floatingInput">Enter your name</label>
+</div>
+    <div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput" name="hisname" required placeholder="name of friend">
+  <label for="floatingInput">Enter name of person whose request you want to accept</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="password" class="form-control" id="floatingPassword" required name="otp" placeholder="otp">
+  <label for="floatingPassword">Enter OTP you recieved with request email</label>
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock body %}

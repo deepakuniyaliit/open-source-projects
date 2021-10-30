@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS | Find Gamers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <style>
+
+        *,
+        *::after,
+        *:before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font: normal 15px/1 sans-serif;
+        }
+
+        h1 {
+            margin: 1rem 2rem;
+            margin-left: 48rem;
+        }
+
+
+        form {
+            margin: 2rem;
+            width: 800px;
+            margin-left: 30rem;
+        }
+
+        .font {
+            font-family: cursive;
+            color: teal;
+        }
+
+        .form-box {
+            padding: 5rem;
+            clear: both;
+            width: 100%;
+            position: relative;
+            padding: 16px 20px 20px 20px;
+            border-radius: 14px;
+            background: #ecf0f3;
+            box-shadow: 13px 13px 20px #cbced1,
+                -13px -13px 20px #ffffff;
+        }
+
+        .form-box label {
+            font-size: 1rem;
+            float: left;
+            width: 100px;
+            margin-right: 200px;
+        }
+
+        .form-box input {
+            font-size: 1rem;
+            width: 300px;
+            padding: 0.25rem 1rem;
+        }
+
+        .form-box select {
+            font-size: 1rem;
+            width: 300px;
+            padding: 0.25rem 1rem;
+        }
+
+        .form-box option {
+            font-size: 1rem;
+            width: 300px;
+            padding: 0.25rem 1rem;
+        }
+
+        .form-box input[type="checkbox"] {
+            font-size: 1rem;
+        }
+
+        .form-box button {
+            font-size: 1rem;
+            border: navy;
+            padding: 0.25rem 2rem;
+            margin-right: 1rem;
+            margin-left: 10rem;
+            color: rgb(252, 250, 250);
+            background-color: cornflowerblue;
+            cursor: pointer;
+        }
+
+        .yellow {
+            color: yellowgreen;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .custom {
+            color: rgb(26, 173, 58);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h4 {
+            margin-left: 0.4rem;
+            color: rgb(139, 22, 235);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+
+        .error::after {
+            background-color: hsl(10, 60%, 50%);
+            color: papayawhip;
+            font-size: 1rem;
+            line-height: 1.8;
+            width: 350px;
+            padding-left: 1rem;
+            position: absolute;
+            right: 0;
+            content: attr(data-errormsg);
+        }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Find Gamers</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">Contact us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/acceptr"><b>Accept Request</b></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+        <strong>{{var1}} {{message}} {{var2}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <h1 class="font animate__animated animate__rollIn">Find Gamers FORMS</h1>
+
+    <form method="post" action="/matchpt">
+        {% csrf_token %}
+        <div class="form-box error animate__animated animate__lightSpeedInLeft " data-errormsg="">
+            <label for="input-first">NAME</label>
+            <input type="text" id="input-first" required name="name" autofocus placeholder="Enter your name" tabindex="1" />
+        </div><br>
+        <div class="form-box error animate__animated animate__lightSpeedInLeft " data-errormsg="">
+            <label for="input-first">{{gg.gname}} ID</label>
+            <input type="text" id="input-first" required name="gameid" autofocus placeholder="Enter {{gg.gname}} ID "
+                tabindex="2" />
+        </div><br>
+        <div class="form-box  animate__animated animate__lightSpeedInLeft" data-errormsg="">
+            <label for="input-email">Email</label>
+            <input type="email" id="input-email" name='email' required placeholder="name@example.com" tabindex="3" />
+        </div><br>
+        <div class="form-box  animate__animated animate__lightSpeedInLeft" data-errormsg="">
+            <label for="input-age">ENTER AGE</label>
+            <select id="input-age" name="opt1" tabindex="4">
+                <option value="1">Under 20</option>
+                <option value="2">20-25</option>
+                <option value="4">25-35</option>
+                <option value="8">Over 35</option>
+            </select>
+        </div><br>
+        <div class="form-box animate__animated animate__lightSpeedInLeft " data-errormsg="">
+            <label for="input-age">HOW MUCH HOURS YOU PLAY<br> </label>
+            <select id="input-age" name="opt2" tabindex="4">
+                <option value="16">Under 1</option>
+                <option value="32">1-2</option>
+                <option value="64">2-4</option>
+                <option value="128">Over 4</option>
+            </select>
+        </div>
+        <br><br>
+        <h2 class='yellow animate__animated animate__jackInTheBox'>CHECK(TICK) IN THE REQUIRED FIELDS</h2><br><br>
+        <div class="form-box animate__animated animate__lightSpeedInLeft" data-errormsg="">
+            <label for="input-comp">Competitive player</label>
+            <input type="hidden" value="0" id="input-comp" name="opt3">
+            <input type="checkbox" id="input-comp" value="1" name="opt3" tabindex="6" />
+        </div><br>
+        <div class="form-box animate__animated animate__lightSpeedInLeft" data-errormsg="">
+            <label for="input-casual">Casual player</label>
+            <input type="hidden" value="0" id="input-comp" name="opt4">
+            <input type="checkbox" id="input-casual" value="1" name="opt4" tabindex="6" />
+        </div><br>
+        <div class="form-box animate__animated animate__lightSpeedInLeft" data-errormsg="">
+            <label for="input-casual">Streamer</label>
+            <input type="hidden" value="0" id="input-comp" name="opt5">
+            <input type="checkbox" id="input-casual" value="1" name="opt5" tabindex="6" />
+        </div><br>
+        <br><br>
+        <h3 class='custom animate__animated animate__jackInTheBox'>TIME SLOT YOU WANTS TO PLAY?</h3><br><br>
+        <div class="form-box animate__animated animate__lightSpeedInLeft" data-errormsg="">
+            <label for="input-CUST1">MORNING</label>
+            <input type="hidden" value="0" id="input-comp" name="opt6">
+            <input type="checkbox" id="input-CUST1" value="1" name="opt6" tabindex="7" />
+        </div><br>
+        <div class="form-box animate__animated animate__lightSpeedInLeft" data-errormsg="">
+            <label for="input-CUST1">AFTERNOON</label>
+            <input type="hidden" value="0" id="input-comp" name="opt7">
+            <input type="checkbox" id="input-CUST1" value="1" name="opt7" tabindex="8" />
+        </div><br>
+        <div class="form-box animate__animated animate__lightSpeedInLeft" data-errormsg="">
+            <label for="input-CUST1">EVENING</label>
+            <input type="hidden" value="0" id="input-comp" name="opt8">
+            <input type="checkbox" id="input-CUST1" value="1" name="opt8" tabindex="9" />
+        </div><br>
+        <div class="form-box animate__animated animate__lightSpeedInLeft" data-errormsg="">
+            <label for="input-CUST1">NIGHT</label>
+            <input type="hidden" value="0" id="input-comp" name="opt9">
+            <input type="checkbox" id="input-CUST1" value="1" name="opt9" tabindex="10" />
+        </div>
+        <br>
+        <div class="form-box animate__animated animate__lightSpeedInLeft" data-errormsg="">
+            <label for="input-age">WILL YOU OPEN UP MIC ENTIRE TIME</label>
+            <br>
+            <select id="input-age" name="opt10" tabindex="14">
+                <option value="1">YES</option>
+                <option value="0">NO</option>
+
+            </select>
+        </div>
+        <br><br>
+        <h4 class="animate__animated animate__jackInTheBox">DO YOU HAVE GOOD AND STABLE INTERNET CONNECTION?</h4>
+        <br><br>
+        <div class="form-box animate__animated animate__lightSpeedInLeft" data-errormsg="">
+
+            <input type="radio" name="opt11" value="1" id="input-INTERNET" tabindex="15" checked />
+            <label for="input-INTERNET">YES</label>
+
+        </div><br>
+        <div class="form-box animate__animated animate__lightSpeedInLeft" data-errormsg="">
+
+            <input type="radio" name="opt11" value="0" id="input-INTERNET" tabindex="16" checked />
+            <label for="input-INTERNET">NO</label>
+
+        </div><br>
+        <div class="form-box">
+            <button id="button-cancel">Cancel</button>
+            <button id="button-send">Send</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

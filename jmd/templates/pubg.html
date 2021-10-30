@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %} PUBG {% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid px-0">
+    <img src="/static/pubg.jpg" class="d-block w-100 mx-0" alt="...">
+  </div>
+  <div class="container mb-3 py-4">
+    <h1 class='text-center'>Find Match</h1>
+    <form method="post" action="/pubg">
+    {% csrf_token %}
+      <div class="mb-3">
+        <label for="name" class="form-label">PUBG ID</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your PUBG ID">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+      </div>
+      <h3 class='text-center'>What's your interest?</h3>
+      <p><h5>When do you want to play?</h5></p>
+      <p>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <label class="form-check-label" for="inlineCheckbox1">1.Morning </label>
+        </div>
+      </p>  
+      <p>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option2">
+          <label class="form-check-label" for="inlineCheckbox1">2.Afternoon</label>
+        </div>
+      </p>  
+      <p>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option3">
+          <label class="form-check-label" for="inlineCheckbox1">3.Evening</label>
+        </div>
+      </p>  
+    <p>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option4">
+        <label class="form-check-label" for="inlineCheckbox1">4.Night</label>
+      </div>
+    </p>
+    <!--<p> ‏‏‎ </p>-->
+    <p><h5>How do you want to play?</h5></p>
+    <p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Relax
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Competeive
+            </label>
+          </div>
+    </p>
+      <button class="btn btn-primary" type="submit">submit</button>
+    </form>
+  </div>
+{% endblock body %}
