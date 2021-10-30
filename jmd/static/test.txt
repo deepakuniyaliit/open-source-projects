@@ -1,0 +1,9 @@
+This is static folder which is visible to everyone,can be assesed by adding - '/static/filename'
+before add ->
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    '/var/www/static/',
+]
+
+in setting in last

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block body %}
+<div id='game' class="col-lg-9 mx-auto">
+	<div class="row mx-auto">
+		{% for game in games %}
+		<div class="card mx-auto mb-3" id={{game.id}} style="width: 18rem;">
+			<style>
+				.card-img-top {
+					width: 100%;
+					height: 40vh;
+					object-fit: cover;
+				}
+			</style>
+			<img class="card-img-top" src="{{game.image.url}}" alt="Card image cap">
+			<div class="card-body">
+				<a href='/?game={{game.id}}'> {{game.gname}}</a>
+				<p> Players waiting = {{game.waiting_list}}</p>
+
+
+			</div>
+
+			<div class="card-footer p-0 no-gutters">
+
+
+
+			</div>
+
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endblock body %}

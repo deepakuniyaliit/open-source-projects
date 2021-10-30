@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block body %}
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+        <strong> {{message}}{{var}} </strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+{% for key,value in dictionary.items %}
+<div class="card">
+  <div class="card-header">
+   
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{key}}</h5>
+    <p class="card-text">you match <strong>{{value}} % </strong> with {{key}} </p>
+    <form method="post" action="/addme">
+    {% csrf_token %}
+    <button class="btn btn-primary" name="addme" type="submit" value="{{key}}">Send Request</button>
+    </form>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock body %}
+

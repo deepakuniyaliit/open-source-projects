@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %} OTP to Delete ID {% endblock title %}
+
+{% block body %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+        <strong>{{message}} </strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+<h1 class="elegantshd text-center"> Delete ID </h1>
+<form method="post" action="/delotp">
+    {% csrf_token %}
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingPassword" required name="otp" placeholder="otp">
+      <label for="floatingPassword">Enter OTP you recieved in your mail</label>
+    </div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock body %}
+
